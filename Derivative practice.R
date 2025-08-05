@@ -46,10 +46,10 @@ eval(dt_dy)
 library(ggplot2)
 library(palmerpenguins)
 
-ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + 
-  geom_point(aes(color = species)) + scale_color_manual(values = c("darkorange", "purple", "cyan4"))
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +  geom_point(aes(color = species)) + scale_color_manual(values = c("darkorange", "purple", "cyan4"))
 + labs(x = "Body mass (g)", y = "Flipper length (mm)", title = "Palmer peguins size meausrments", 
        subtitle = "palmer archipelago, Antartica (2007 - 2009", caption = "collected by Dr. Kristen Gorman") + 
   facet_wrap(~island) + theme_minimal()
+
 
 #test
