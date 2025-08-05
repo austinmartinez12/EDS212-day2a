@@ -29,10 +29,16 @@ df_dx
 
 #....................You Try!....................
 #Using the D() function in R:
-#1 dg_dz
+#1
 dg_dz <-D(expr = expression( 2*z^3 - 10.5*z^2 +4.1), name = "z")
 dg_dz
 #2
-dg_dz2 <-D(expr = expression( (2*y^3 + 1)^4 - 8*y^3), name = "y")
-dg_dz2
+dt_dy <-D(expr = expression( (2*y^3 + 1)^4 - 8*y^3), name = "y")
+dt_dy
 
+#find the slope of t(y) at a range of values
+y <- seq(from = -0.4, to = 2.0, by = 0.1)
+
+#evaluate the slope of T(y) at each of those values
+eval(dt_dy)
+  
